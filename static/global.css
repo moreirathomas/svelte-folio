@@ -1,0 +1,73 @@
+:root {
+  /* color palette */
+  --white: rgb(255, 255, 255);
+  --black: rgb(6, 6, 25);
+  --blue: rgb(55, 134, 246);
+  --red: rgb(234, 84, 69);
+  --orange: rgb(236, 135, 53);
+  /* globals colors */
+  --color-background: rgb(35, 35, 35);
+  --color-background-accent: rgb(40, 40, 40);
+  --color-background-compo: rgb(25, 25, 25);
+  --color-text: rgb(255, 255, 255);
+  /* shadows */
+  --shadow: 0px 2px 15px -8px rgba(10, 10, 10, 0.2),
+    0px 4px 20px -10px rgba(10, 10, 10, 0.125);
+  --shadow-accent: 0px 2px 15px -8px rgba(7, 7, 15, 0.85),
+    0px 4px 20px -10px rgba(150, 150, 170, 0.125);
+  /* borders */
+  --radius: 1rem;
+  --radius-xl: 3rem;
+  /* spacings */
+  --spacing-xs: 1rem;
+  --spacing: 2rem;
+  --spacing-xl: 3rem;
+  /* font sizes */
+  --font-size-xs: 0.875rem;
+  --font-size: 1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 2.5rem;
+  /* content width */
+  --content-width: 48em;
+}
+/* minimal reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background: var(--color-background);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* font awsome icons margin */
+i {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
