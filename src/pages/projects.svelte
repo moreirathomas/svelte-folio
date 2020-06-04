@@ -15,8 +15,7 @@
     const unfilteredRepos = await res.json();
 
     repos = unfilteredRepos.filter(
-      repo =>
-        repo.name !== ("svelte-app-portfolio" || "svelte-routify-portfolio")
+      repo => repo.name !== "svelte-routify-portfolio"
     ); // do not includes this portfolio repo or infinite loop of links target blank
     // possible refacto : destructuring the array to pass {...repo} in <ProjectCard /> instead of each prop
   });

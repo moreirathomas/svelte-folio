@@ -96,7 +96,7 @@
       aria-label={homepage === '' ? 'Not online ✖︎' : 'See website ➜'}
       class:disabled={homepage === ''}
       on:click={event => {
-        if (homepage === '') event.preventDefault();
+        if (homepage === ('' || null)) event.preventDefault();
       }}>
 
       <div class="project-card--thumbnail">
