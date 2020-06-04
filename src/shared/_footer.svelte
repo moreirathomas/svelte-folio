@@ -90,7 +90,7 @@
         <li>
           Also, you can check this app repository
           <a
-            href="https://github.com/moreirathomas/svelte-app-portfolio"
+            href="https://github.com/moreirathomas/svelte-routify-portfolio"
             target="_blank">
             here.
           </a>

@@ -85,18 +85,17 @@
   <section class="about">
 
     <h2>About me</h2>
-    <p>I'm a French 🇫🇷 3rd year student at HETIC, living in Paris.</p>
+    <p>I'm a French 3rd year student at HETIC, I recently moved to Paris 🇫🇷</p>
     <p>
-      Working my way to become a fullstack developer, I'm looking for an 6+
-      month internship as there's nothing like real world experience to learn
-      and improve my skills.
+      I'm currently learning and coding my way to become a fullstack developer
+      🚀
     </p>
     <p>
       I'm in love with science, tech , philosophy, video games and good food.
       <br />
       So, if you're wondering what I'm doing right now, the answer is probably
-      searching and learning about new stuff ! Or playing video game, or
-      cooking.
+      searching and learning about new stuff to build awsome things ! Either
+      that or playing video game or cooking diner.
     </p>
 
   </section>
