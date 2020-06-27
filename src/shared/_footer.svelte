@@ -60,7 +60,11 @@
 
         {#each links as link}
           <li>
-            <a class="link-btn" href={link.url} target="_blank">
+            <a
+              class="link-btn"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer">
               <i class={link.iconClassName} style="color: {link.iconColor}" />
               {link.name}
             </a>
@@ -81,9 +85,19 @@
 
         <li>
           Using
-          <a href="https://svelte.dev/" target="_blank">Svelte</a>
+          <a
+            href="https://svelte.dev/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Svelte
+          </a>
           and
-          <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+          <a
+            href="https://fontawesome.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Font Awesome
+          </a>
           's icons.
         </li>
 
@@ -91,7 +105,8 @@
           Also, you can check this app repository
           <a
             href="https://github.com/moreirathomas/svelte-routify-portfolio"
-            target="_blank">
+            target="_blank"
+            rel="noopener noreferrer">
             here.
           </a>
         </li>

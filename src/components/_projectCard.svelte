@@ -93,6 +93,7 @@
     <a
       href={homepage}
       target="_blank"
+      rel="noopener noreferrer"
       aria-label={homepage === '' ? 'Not online ✖︎' : 'See website ➜'}
       class:disabled={homepage === ''}
       on:click={event => {
@@ -112,7 +113,11 @@
 
   <div class="project-card--content link-wrapper">
 
-    <a href={repoUrl} target="_blank" aria-label="See repository ➜">
+    <a
+      href={repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="See repository ➜">
 
       <h3>{name}</h3>
       <p>{description}</p>

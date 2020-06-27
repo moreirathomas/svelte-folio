@@ -17,6 +17,7 @@
       font-size: var(--font-size-xxl);
       font-family: "Montserrat", sans-serif;
       font-weight: 700;
+      text-align: center;
     }
     code {
       background: var(--red);
@@ -24,22 +25,39 @@
       font-weight: 700;
       border-radius: 4px;
     }
+    .back-links-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 </style>
 
 <!-- template -->
 
 <main>
-  <h1>Oops, 404</h1>
+  <h1>Oops, error 404</h1>
 
   <p>
     Path
     <code>/{$route.leftover}</code>
-    doesn't exist 🦄
+    doesn't exist here 🦄
   </p>
 
-  <a class="link-btn" href={$url('/')}>
-    <i class="fas fa-home" style="color: var(--white)" />
-    Back to homepage
-  </a>
+  <ul class="back-links-container">
+    <li>
+      <a class="link-btn" href={$url('/')}>
+        <i class="fas fa-home" style="color: var(--white)" />
+        Back to homepage
+      </a>
+    </li>
+    <li>
+      <a class="link-btn" href={$url('/playground')}>
+        <i class="fas fa-puzzle-piece" style="color: var(--white)" />
+        Back to playground
+      </a>
+    </li>
+  </ul>
+
 </main>
