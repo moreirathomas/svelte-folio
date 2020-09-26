@@ -32,10 +32,10 @@ export const languages = [
   { language: 'null', color: '#fff' },
 ];
 export const getColor = (language) => {
-  const matchingLanguage = languages.filter(
+  const matchingLanguage = languages.find(
     (lang) => lang.language === language
   );
-  return matchingLanguage[0].color;
+  return matchingLanguage.color;
 };
 
 // contact links array ~ imported in _footer.svelte

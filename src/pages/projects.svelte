@@ -12,12 +12,19 @@
 
   onMount(async () => {
     const res = await fetch(apiUrl);
-    const unfilteredRepos = await res.json();
+    const serverData = await res.json();
 
-    repos = unfilteredRepos.filter(
-      repo => repo.name !== "svelte-routify-portfolio" && repo.name !== "moreirathomas"
+    const filteredRepos = serverData.filter(
+      repo =>
+        repo.name !== "svelte-routify-portfolio" &&
+        repo.name !== "moreirathomas"
     ); // do not include this portfolio repo or infinite loop of links target blank and do not include the github readme (useless + language = null)
     // possible refacto : destructuring the array to pass {...repo} in <ProjectCard /> instead of each prop
+
+    repos = filteredRepos.map(repo => {
+      const { name, description, language, html_url, homepage } = repo;
+      return { name, description, language, html_url, homepage };
+    });
   });
 </script>
 
@@ -50,12 +57,7 @@
     <div class="projects-grid">
 
       {#each repos as repo}
-        <ProjectCard
-          name={repo.name}
-          description={repo.description}
-          language={repo.language}
-          repoUrl={repo.html_url}
-          homepage={repo.homepage} />
+        <ProjectCard {repo} />
       {/each}
 
     </div>

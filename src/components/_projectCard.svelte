@@ -1,13 +1,9 @@
 <script>
-  export let name;
-  export let description;
-  export let language;
-  export let repoUrl;
-  export let homepage;
+  export let repo;
 
-  import { languages, getColor } from "../utils/utils.js";
+  import { getColor } from "../utils/utils.js";
 
-  let imgSrc = `./images/${name}.png`; // need to manually name the png same as the repo
+  let imgSrc = `./images/${repo.name}.png`; // need to manually name the png same as the repo
 </script>
 
 <style lang="scss">
@@ -91,13 +87,13 @@
   <div class="link-wrapper">
 
     <a
-      href={homepage}
+      href={repo.homepage}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={homepage === '' ? 'Not online ✖︎' : 'See website ➜'}
-      class:disabled={homepage === ''}
+      aria-label={repo.homepage === '' || repo.homepage === null ? 'Not online ✖︎' : 'See website ➜'}
+      class:disabled={repo.homepage === '' || repo.homepage === null}
       on:click={event => {
-        if (homepage === ('' || null)) event.preventDefault();
+        if (repo.homepage === '' || repo.homepage === null) event.preventDefault();
       }}>
 
       <div class="project-card--thumbnail">
@@ -114,21 +110,21 @@
   <div class="project-card--content link-wrapper">
 
     <a
-      href={repoUrl}
+      href={repo.html_url}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="See repository ➜">
 
-      <h3>{name}</h3>
-      <p>{description}</p>
+      <h3>{repo.name}</h3>
+      <p>{repo.description}</p>
 
       <div class="lang-tags-list">
         <!-- 2 hex numbers appended at the end of the code : opacity -->
         <span
           class="lang-tag"
-          style="color:{getColor(language)}; background:{getColor(language) + '40'}
+          style="color:{getColor(repo.language)}; background:{getColor(repo.language) + '40'}
           ">
-          {language}
+          {repo.language}
         </span>
       </div>
     </a>
