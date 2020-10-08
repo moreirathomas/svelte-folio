@@ -29,6 +29,8 @@ export const languages = [
   { language: 'CSS', color: '#42a5f5' },
   { language: 'JavaScript', color: '#ffca28' },
   { language: 'TypeScript', color: '#3178c6' },
+  { language: 'Svelte', color: '#ea4f27' },
+  { language: 'Vue', color: '#67b587' },
   { language: 'null', color: '#fff' },
 ];
 export const getColor = (language) => {
