@@ -37,7 +37,7 @@ export const getColor = (language) => {
   const matchingLanguage = languages.find(
     (lang) => lang.language === language
   );
-  return matchingLanguage.color;
+  return matchingLanguage.color || '#fff';
 };
 
 // contact links array ~ imported in _footer.svelte
