@@ -1,5 +1,5 @@
 <script>
-  import { links } from "../utils/utils.js";
+  import { links } from "../helpers/constants";
 </script>
 
 <style lang="scss">
@@ -65,7 +65,7 @@
               href={link.url}
               target="_blank"
               rel="noopener noreferrer">
-              <i class={link.iconClassName} style="color: {link.iconColor}" />
+              <i class={link.icon.class} style="color: {link.icon.color}" />
               {link.name}
             </a>
           </li>

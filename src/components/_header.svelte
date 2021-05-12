@@ -1,5 +1,5 @@
 <script>
-  import Link from "../components/_link.svelte";
+  import Link from "./_link.svelte";
   import { url, route } from "@sveltech/routify";
 
   // const path = window.location.pathname; // check current path to dynamically render h1 text

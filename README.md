@@ -1,6 +1,6 @@
 # Tools used
 
-### Development
+## Development
 
 [Routify](https://github.com/sveltech/routify)
 
@@ -8,10 +8,11 @@
 
 [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess)
 
-### Deployment
+## Deployment
+
 [Netlify](https://docs.netlify.com/)
 
-### Npm scripts
+## Npm scripts
 
 | Syntax        | Description                                                               |
 | ------------- | ------------------------------------------------------------------------- |
@@ -21,5 +22,3 @@
 | `serve`       | Run after a build to preview. Serves SPA on 5000 and SSR on 5005          |
 | `deploy:*`    | Deploy to netlify or now                                                  |
 | `export`      | Create static pages from content in dist folder (used by `npm run build`) |
-
-

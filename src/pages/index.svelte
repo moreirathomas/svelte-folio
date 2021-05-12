@@ -1,9 +1,9 @@
 <script>
-  import Header from "../shared/_header.svelte";
-  import Footer from "../shared/_footer.svelte";
+  import Header from "../components/_header.svelte";
+  import Footer from "../components/_footer.svelte";
   import Link from "../components/_link.svelte";
 
-  import { skills } from "../utils/utils.js";
+  import { skills } from "../helpers/constants";
 </script>
 
 <style lang="scss">

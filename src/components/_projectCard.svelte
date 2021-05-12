@@ -1,9 +1,10 @@
 <script>
   export let repo;
 
-  import { getColor } from "../utils/utils.js";
+  import { defaultDescriptionIfNotExists, getColorForLanguage, getImageSource } from "../helpers";
 
-  let imgSrc = `./images/${repo.name}.png`; // need to manually name the png same as the repo
+  const langColor = getColorForLanguage(repo.language)
+  const imgSrc = getImageSource(repo.name)
 </script>
 
 <style lang="scss">
@@ -116,13 +117,13 @@
       aria-label="See repository ➜">
 
       <h3>{repo.name}</h3>
-      <p>{repo.description}</p>
+      <p>{defaultDescriptionIfNotExists(repo.description)}</p>
 
       <div class="lang-tags-list">
         <!-- 2 hex numbers appended at the end of the code : opacity -->
         <span
           class="lang-tag"
-          style="color:{getColor(repo.language)}; background:{getColor(repo.language) + '40'}
+          style="color:{langColor}; background:{langColor + '40'}
           ">
           {repo.language}
         </span>

@@ -1,8 +1,8 @@
 <script>
   import { onMount } from "svelte";
 
-  import Header from "../shared/_header.svelte";
-  import Footer from "../shared/_footer.svelte";
+  import Header from "../components/_header.svelte";
+  import Footer from "../components/_footer.svelte";
   import ProjectCard from "../components/_projectCard.svelte";
 
   const apiUrl =
@@ -14,12 +14,12 @@
     const res = await fetch(apiUrl);
     const serverData = await res.json();
 
+    // do not include this portfolio repo and do not include the github readme
     const filteredRepos = serverData.filter(
       repo =>
         repo.name !== "svelte-routify-portfolio" &&
         repo.name !== "moreirathomas"
-    ); // do not include this portfolio repo or infinite loop of links target blank and do not include the github readme (useless + language = null)
-    // possible refacto : destructuring the array to pass {...repo} in <ProjectCard /> instead of each prop
+    );
 
     repos = filteredRepos.map(repo => {
       const { name, description, language, html_url, homepage } = repo;
