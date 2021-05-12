@@ -6,7 +6,7 @@ export const getColorForLanguage = (language) => {
 }
 
 export const defaultDescriptionIfNotExists = (description) => {
-  return description != null ? description : "No description provided"
+  return description != null ? description : "No description provided, it is a work in progress 🚧"
 }
 
 export const getImageSource = (name) => {
