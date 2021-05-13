@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { ready } from "@sveltech/routify";
 
   import Header from "../components/_header.svelte";
   import Footer from "../components/_footer.svelte";
@@ -25,6 +26,7 @@
       const { name, description, language, html_url, homepage } = repo;
       return { name, description, language, html_url, homepage };
     });
+    $ready()
   });
 </script>
 
