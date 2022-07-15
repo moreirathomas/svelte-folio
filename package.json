@@ -35,6 +35,6 @@
   },
   "dependencies": {
     "@sveltech/routify": "^1.7.12",
-    "svelte": "^3.23.0"
+    "svelte": "^3.49.0"
   }
 }
